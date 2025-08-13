@@ -36,7 +36,7 @@ def bresenham(x0, y0, x1, y1):
 	# Com esse valor em mãos nossa formula final ficaria assim
 	#
 	# dp+1 = { Dp += 2.(dy − dx)     se Dp > 0,
-	#	 { Dp += (2 . dy)  	 Caso contrario.
+	#	     { Dp += (2 . dy)  	     Caso contrario.
 
 	# Iremos utilizar o x como ponto de partida para a aplicação da fomula.
 	result = []
