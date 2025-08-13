@@ -76,8 +76,8 @@ def bresenham(x0, y0, x1, y1):
 
 # Iremos aplicar conteudos nessas cordenadas no display substituindo por "#"
 for x, y in bresenham(10, 3, 20, 20):
-	if 0 <= x < cx and 0 <= y < cy:	# Evitando que as cordenadas repassadas saiam do display
-		screen[x][y] = "#" 	# <-- aplicando o conteudo nas cordenadas repassadas.
+	if 0 <= x < cx and 0 <= y < cy:		# Evitando que as cordenadas repassadas saiam do display
+		screen[x][y] = "#" 				# <-- aplicando o conteudo nas cordenadas repassadas.
 
 # Renderizando o conteudo display na tela.
 for row in screen:
