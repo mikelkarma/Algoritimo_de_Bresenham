@@ -41,28 +41,28 @@ def bresenham(x0, y0, x1, y1):
 	# Iremos utilizar o x como ponto de partida para a aplicação da fomula.
 	result = []
 	x, y = x0, y0
-	if dx > dy:					# Aplicação da formula para linhas mais horizontais
+	if dx > dy:					        # Aplicação da formula para linhas mais horizontais
 		dp = 2 * dy - dx
 		for _ in range(dx + 1): 		# dp + 1 = {
 			result.append((x, y)) 		# Armazenamento dos resultados das tomadas de desições
-			if dp > 0:   			# Se Pn > 0
-				y += yi			  # aumentamos o Y
-				dp += 2 * (dy - dx)	  # e calculamos o acumulo de erro
-			else: 				# Caso o contrario
-				dp += (2 * dy)	  	# somente calculamos o acumulo do erro.
+			if dp > 0:   			    # Se Pn > 0
+				y += yi			          # aumentamos o Y
+				dp += 2 * (dy - dx)	      # e calculamos o acumulo de erro
+			else: 				        # Caso o contrario
+				dp += (2 * dy)	    	  # somente calculamos o acumulo do erro.
 			x += xi
 		return result
 
 
-	else: 						# Para linhas menos horizontais e mais verticas
+	else: 						        # Para linhas menos horizontais e mais verticas
 		dp = 2 * dx - dy
-		for _ in range(dy + 1):                 # dp + 1 = {
-			result.append((x, y))           # Armazenamento dos resultados das tomadas de desições
-			if dp > 0:                      # Se Pn > 0
+		for _ in range(dy + 1):         # dp + 1 = {
+			result.append((x, y))       # Armazenamento dos resultados das tomadas de desições
+			if dp > 0:                  # Se Pn > 0
 				x += xi                   # aumentamos o X
 				dp += 2 * (dx - dy)       # e calculamos o acumulo de erro
-			else:                           # Caso o contrario
-				dp += 2 * dx          # somente calculamos o acumulo do erro.
+			else:                       # Caso o contrario
+				dp += 2 * dx              # somente calculamos o acumulo do erro.
 			y += yi
 		return result
 
